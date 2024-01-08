@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NOTES, Note } from '../../../notes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-note-list',
@@ -10,8 +11,12 @@ import { NOTES, Note } from '../../../notes';
 })
 export class AppNoteListComponent {
   notes: Note[] = NOTES;
+  router = inject(Router);
 
   show(title: string) {
     alert(title);
+  }
+  navegate() {
+    this.router.navigateByUrl('/new');
   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AppNoteListComponent } from './components/app-note-list/app-note-list.component';
 import { AppAddNoteComponent } from './components/app-add-note/app-add-note.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
